@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ModernNotif" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9D8-GP-dln">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="760" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4EF-xX-IyC" userLabel="delay part" colorLabel="IBBuiltInLabel-Orange">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2L-XB-jfc">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EIA-Sq-YfN">
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxR-dy-61W">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="iL0-mT-LFo"/>
+                                        </constraints>
+                                        <state key="normal" title="SHOW NOTIFICATION 1"/>
+                                        <connections>
+                                            <action selector="showNotification1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Epk-BA-soa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUw-pn-Lgf">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="S4d-jI-l1w"/>
+                                        </constraints>
+                                        <state key="normal" title="SHOW NOTIFICATION 2"/>
+                                        <connections>
+                                            <action selector="showNotification2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PQk-4H-CGY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4EF-xX-IyC" firstAttribute="top" secondItem="9D8-GP-dln" secondAttribute="top" id="1Ag-i5-Syc"/>
+                                    <constraint firstItem="cUw-pn-Lgf" firstAttribute="leading" secondItem="9D8-GP-dln" secondAttribute="leading" id="Gy3-qy-G0i"/>
+                                    <constraint firstItem="cxR-dy-61W" firstAttribute="leading" secondItem="9D8-GP-dln" secondAttribute="leading" id="HsO-dG-OVb"/>
+                                    <constraint firstItem="4EF-xX-IyC" firstAttribute="leading" secondItem="9D8-GP-dln" secondAttribute="leading" id="SJV-em-gCn"/>
+                                    <constraint firstAttribute="trailing" secondItem="4EF-xX-IyC" secondAttribute="trailing" id="hMe-mj-sse"/>
+                                    <constraint firstAttribute="trailing" secondItem="cUw-pn-Lgf" secondAttribute="trailing" id="mc9-Z9-h2o"/>
+                                    <constraint firstAttribute="trailing" secondItem="cxR-dy-61W" secondAttribute="trailing" id="uDB-Xl-n53"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9D8-GP-dln" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="190" id="ens-Jw-pkU"/>
+                            <constraint firstItem="9D8-GP-dln" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j88-sq-MaW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tfDelay" destination="EIA-Sq-YfN" id="pWY-ii-YSF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
